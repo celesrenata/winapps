@@ -22,3 +22,4 @@ sleep 3
 fi
 cd pkg
 ./installer.sh
+echo "You may need to logout or restart ags (command + control + r) or check help menu (option + command + /)"
