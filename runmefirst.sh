@@ -13,10 +13,10 @@ fi
 
 if [ -f /mnt/shared/provisioned ] && ! [ -f /mnt/shared/m365setup ]; then
   echo "provisioning completed, installing m365"
-  xfreerdp /d: /cert:ignore /u:celes /p:renata /v:127.0.0.1 +auto-reconnect +home-drive -wallpaper &
+  xfreerdp /d: /cert:ignore /u:demo /p:demo /v:127.0.0.1 +auto-reconnect +home-drive -wallpaper &
     sleep 5
     pkill xfreerdp
-    xfreerdp /cert:ignore /d: /u:celes /p:renata /v:127.0.0.1 +auto-reconnect +clipboard +home-drive -wallpaper /scale:140 /dynamic-resolution '/wm-class:M365 Apps Installation' '/app:program:C:\oem\install2.bat'
+    xfreerdp /cert:ignore /d: /u:demo /p:demo /v:127.0.0.1 +auto-reconnect +clipboard +home-drive -wallpaper /scale:140 /dynamic-resolution '/wm-class:M365 Apps Installation' '/app:program:C:\oem\install2.bat'
 echo "if it exists with [19:13:18:742] [73363:00011e95] [INFO][com.freerdp.core] - [rdp_print_errinfo]: ERRINFO_LOGOFF_BY_USER (0x0000000C):The disconnection was initiated by the user logging off... We're all set!"
 sleep 3
 fi
